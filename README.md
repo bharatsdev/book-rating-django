@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/everythingisdata/book-rating-django.svg?branch=main)](https://travis-ci.com/everythingisdata/book-rating-django)
+
 # Django Book Rating 
 
 Django-Fullstack is full stack python repo. 
