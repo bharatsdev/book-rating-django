@@ -1,4 +1,4 @@
-# Django-FullStack
+# Django Book Rating app
 
 Django-Fullstack is full stack python repo. 
 
