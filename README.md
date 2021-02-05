@@ -8,6 +8,8 @@ Django-Fullstack is full stack python repo.
     Django
     Angular
     Postgresql
+    Heroku
+    firbase
     Docker
     Docker-compose
 
