@@ -1,0 +1,8 @@
+<div *ngFor="let book of books" class="book-items">
+    <h3 (click)="bookClicked(book)">{{book.name}}</h3>
+    <h3 (click)="bookClicked(book)">{{book.author}}</h3>
+    <fa-icon [icon]="edit" (click)="editBookEvent(book)"></fa-icon>
+    <fa-icon [icon]="trash" (click)="deleteBookEvent(book)"></fa-icon>
+
+</div>
+<button (click)="newBookEvent()">Add Books</button>

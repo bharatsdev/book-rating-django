@@ -1,0 +1,16 @@
+<div *ngIf="book">
+
+    <h3>{{book.name}}</h3>
+    <p>{{book.author}}</p>
+    <fa-icon [icon]="faStar" [ngClass]="{'orange':book.avg_ratings>0}"></fa-icon>
+    <fa-icon [icon]="faStar" [ngClass]="{'orange':book.avg_ratings>1}"></fa-icon>
+    <fa-icon [icon]="faStar" [ngClass]="{'orange':book.avg_ratings>2}"></fa-icon>
+    <fa-icon [icon]="faStar" [ngClass]="{'orange':book.avg_ratings>3}"></fa-icon>
+    <fa-icon [icon]="faStar" [ngClass]="{'orange':book.avg_ratings>4}"></fa-icon>({{book.no_of_ratings}})
+
+    <div id="rate-container">
+        <h2>Rate it!!</h2>
+        <fa-icon *ngFor="let rate of [1,2,3,4,5]" [icon]="faStar" (mouseenter)="rateHover(rate)" (mouseleave)="rateHover(0)" (click)="rateClicked(rate)" [ngClass]="{'purple':rateHovered>=rate}"></fa-icon>
+    </div>
+
+</div>

@@ -1,0 +1,10 @@
+<nav>
+    <button (click)="logoutForm()">Logout></button>
+</nav>
+<div class="layout">
+    <app-book-list [books]="books" (selectBook)="selectBooks($event)" (editBook)="editedBookMain($event)" (createBook)="createBookMain()" (deletedBook)="deletedBookEvent($event)"></app-book-list>
+    <div>
+        <app-book-details [book]="selectedBook" (updatedBook)="selectBooks($event)"></app-book-details>
+        <app-book-form *ngIf="editBook" [book]="editBook" (bookCreated)="bookCreatedEvent($event)"></app-book-form>
+    </div>
+</div>

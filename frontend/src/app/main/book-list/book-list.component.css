@@ -1,0 +1,14 @@
+.book-items {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+}
+
+.book-items fa-icon {
+    margin: 15px 15px;
+    font-size: 1.5em !important;
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: crimson !important;
+}

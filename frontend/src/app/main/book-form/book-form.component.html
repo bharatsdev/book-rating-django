@@ -1,0 +1,15 @@
+<form [formGroup]="bookForm" (submit)="saveForm()">
+    <label>Title</label><br>
+    <input type="text" formControlName="name" /> <br>
+
+    <label>Author</label><br>
+    <textarea formControlName="author"></textarea> <br>
+
+    <label>ISBN</label><br>
+    <textarea formControlName="isbn"></textarea> <br>
+
+    <button type="submit" [disabled]="disableFormAction()">
+        <span *ngIf="bookId">Update</span>
+        <span *ngIf="!bookId">Create</span>
+    </button>
+</form>

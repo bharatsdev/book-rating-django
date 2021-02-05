@@ -1,0 +1,49 @@
+version: '3.9'
+services:
+  web_db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_DB=books
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - /Volumes/Development/postgres_data:/var/lib/postgresql
+    networks:
+      - jango-netowrk
+  web_backend:
+    build: backend
+    image: backend:latest
+    command: python manage.py runserver 0.0.0.0:5000
+    ports:
+      - "5000:5000"
+    #    volumes:
+    #      - postgre_data:/Volumes/Development/code/postgres_data
+    depends_on:
+      - web_db
+    networks:
+      - jango-netowrk
+  web_frontend:
+    build: frontend
+    image: frontend:latest
+    command: ng serve  --host 0.0.0.0
+    ports:
+      - "4202:4200"
+    #    volumes:
+    #      - ./app:/usr/src/app
+    #      - .:/app
+    #      - /tmp/app/mysqld:/run/mysqld
+    depends_on:
+      - web_db
+      - web_backend
+    networks:
+      - jango-netowrk
+
+networks:
+  jango-netowrk:
+    driver: bridge
+
+#volumes:
+#  postgre_data:

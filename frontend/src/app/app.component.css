@@ -1,0 +1,23 @@
+.app {
+    background-color: #282c34;
+    color: white;
+    min-height: calc(100vh-100px);
+    padding: 10px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    font-size: 3em;
+}
+
+p {
+    font-family: Lato;
+}
+
+h1 fa-icon {
+    color: white;
+    transform: rotate(180deg);
+    display: inline-block
+}

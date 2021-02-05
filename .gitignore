@@ -1,0 +1,7 @@
+
+.idea
+
+backend/ratings/__pycache__/
+backend/ratings/api/__pycache__/
+backend/ratings/api/migrations/__pycache__/
+README.m
