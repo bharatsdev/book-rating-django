@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavigationBarComponent } from './nav/navigation-bar/navigation-bar.component';
+import { AuthorComponent } from './author/author.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'auth' }
@@ -18,6 +19,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     NavigationBarComponent,
+    AuthorComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,10 +5,22 @@ from django.db.models import Model
 from django.utils import timezone
 
 
+class Author(Model):
+    name = models.CharField(max_length=100)
+    age = models.CharField(max_length=100)
+    joinedAt = models.DateField(default=timezone.now, null=True)
+
+    class Meta:
+        db_table = "Author"
+
+
 class Book(Model):
     name = models.CharField(max_length=100)
     isbn = models.IntegerField()
     author = models.CharField(max_length=100)
+
+    # models.ForeignKey(Author, on_delete=models.CASCADE)
+
     # published = models.DateTimeField(default=timezone.now, null=True)
 
     def no_of_ratings(self):

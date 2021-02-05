@@ -8,6 +8,8 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookApiService } from '../_services/book-api.service';
+import { AuthorComponent } from './author/author.component';
+import { BookAuthorComponent } from './book-author/book-author.component';
 
 const routes: Routes = [
   { path: 'books', component: MainComponent }
@@ -19,6 +21,8 @@ const routes: Routes = [
     BookFormComponent,
     BookDetailsComponent,
     BookListComponent,
+    AuthorComponent,
+    BookAuthorComponent,
   ],
   imports: [
     CommonModule,

@@ -2,6 +2,10 @@
 
 Django-Fullstack is full stack python repo. 
 
+- Django Setup
+- Docker Setup 
+
+
 ## TechStack
 
     Python
